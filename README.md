@@ -22,7 +22,7 @@ AI 助手 skill 支持 Claude Code 和 Codex。装上后直接问「公司让我
 <table>
 <tr><td align="right"><b>下载</b></td><td align="left">
 
-[PDF](https://github.com/guhaifei/how-to-work-better/releases/download/book-latest/%E9%AB%98%E6%80%A7%E4%BB%B7%E6%AF%94%E8%81%8C%E5%9C%BA%E6%8C%87%E5%8D%97.pdf) · [EPUB](https://github.com/guhaifei/how-to-work-better/releases/download/book-latest/%E9%AB%98%E6%80%A7%E4%BB%B7%E6%AF%94%E8%81%8C%E5%9C%BA%E6%8C%87%E5%8D%97.epub) · [离线单文件（HTML）](https://github.com/guhaifei/how-to-work-better/releases/download/book-latest/%E9%AB%98%E6%80%A7%E4%BB%B7%E6%AF%94%E8%81%8C%E5%9C%BA%E6%8C%87%E5%8D%97-%E5%85%A8%E6%9C%AC.html)
+[PDF](https://github.com/guhaifei/how-to-work-better/releases/download/book-latest/HowToWorkBetter.pdf) · [EPUB](https://github.com/guhaifei/how-to-work-better/releases/download/book-latest/HowToWorkBetter.epub) · [离线单文件（HTML）](https://github.com/guhaifei/how-to-work-better/releases/download/book-latest/HowToWorkBetter.html)
 
 </td></tr>
 <tr><td align="right"><b>查阅</b></td><td align="left">
