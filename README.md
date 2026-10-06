@@ -14,6 +14,7 @@
 [![证据分级](https://img.shields.io/badge/%E8%AF%81%E6%8D%AE%E5%88%86%E7%BA%A7-A%20518%20%C2%B7%20B%2051%20%C2%B7%20C%207-915930?style=flat-square)](#证据分级)
 [![原始文献](https://img.shields.io/badge/%E5%8E%9F%E5%A7%8B%E6%96%87%E7%8C%AE-885%20%E6%9D%A1%E9%93%BE%E6%8E%A5-565a5f?style=flat-square)](docs/核实记录/)
 [![许可](https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF-CC%20BY%204.0-565a5f?style=flat-square)](#许可)
+[![GitHub Star](https://img.shields.io/github/stars/guhaifei/how-to-work-better?style=flat-square&label=Star)](https://github.com/guhaifei/how-to-work-better/stargazers)
 
 ### [打开在线检索页](https://guhaifei.github.io/how-to-work-better/) · [让 AI 照书回答（skill）](skills/workplace-decision-guide/README.md)
 
@@ -329,4 +330,14 @@ python tools/full-audit.py          # 产出对齐：README 真渲染、目录�
 书里的法条、社保比例、假期天数和各项标准经常更新。**转载或者拿去用的时候，请同时写上你同步的是哪一天的版本。**
 
 代码用 [MIT](LICENSE-CODE) 发布，范围是 tools/、skills/、index.html 和 .github/。其中 `tools/shell-index.html`、`tools/shell-offline.html`、`tools/template.typ` 是 [HowToLiveBetter](https://github.com/eternity4719/HowToLiveBetter) 的查看器外壳与 typst 排版模板，版权归原作者，按 MIT 使用；六字段、证据分级、成本标签这套文字体例也继承自那个项目（CC BY 4.0）。范围与归属写法见 LICENSE-CODE 末尾那一段。
+
+## Star 走势
+
+[![Star History Chart](https://api.star-history.com/svg?repos=guhaifei/how-to-work-better&type=Date)](https://star-history.com/#guhaifei/how-to-work-better&Date)
+
+## 觉得有用
+
+哪一条真的帮到了你——谈下了补偿、追回了欠薪、躲开了一份坑合同——欢迎给仓库点一个 [Star](https://github.com/guhaifei/how-to-work-better/stargazers)，让还在闷头吃哑巴亏的人搜得到这本书。
+
+书比法条旧得快。发现哪个数字过时、哪个链接打不开、哪条说法有误，[提一个纠错 issue](https://github.com/guhaifei/how-to-work-better/issues/new?template=1-%E7%BA%A0%E9%94%99.yml)，这比 Star 更帮这本书。
 
