@@ -1,0 +1,31 @@
+name: 建议补充内容
+description: 书里还没写到、你觉得值得加的主题
+labels: ["新内容"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        这本书只收能回答「花掉什么、换回什么」的建议：每条要算得出成本（钱／时间／毅力）和收益，
+        来源只引官方文件原文和研究文献。答不出这两个问题的题目收不进来。
+        想看现有的覆盖范围，先读 README 的目录。
+  - type: input
+    id: topic
+    attributes:
+      label: 主题
+      placeholder: 比如：工伤认定怎么走
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: 想让书回答什么问题
+      description: 写具体一点，比如「该去哪个机构、要准备什么材料、大概多久办完」。
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: 你知道的来源（可选）
+      description: 法规、部门文件、官方统计、论文的链接。
+    validations:
+      required: false

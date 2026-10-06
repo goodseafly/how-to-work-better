@@ -1,0 +1,115 @@
+# 正文一改就重新生成三样，挂到固定的 Release「book-latest」上，下载链接不变。
+# PR 只生成并校验，不发布，产物在 Actions 页面的 artifact 里。
+# 生成链和本地完全一致：同样是 tools/ 下那四个 Python 脚本，所以本地跑得通、CI 就跑得通。
+name: 电子书
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - README.md
+      - index.html
+      - og.png
+      - book/**
+      - docs/*.md
+      - tools/**
+      - .github/workflows/book.yml
+  pull_request:
+    paths:
+      - README.md
+      - index.html
+      - og.png
+      - book/**
+      - docs/*.md
+      - tools/**
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: book-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PANDOC_VERSION: '3.12'
+  TYPST_VERSION: '0.15.1'
+  BOOK_OUT: dist
+
+jobs:
+  # 交叉引用没补好不该连累 EPUB、PDF 和离线单文件的发布，那是两回事。
+  checks:
+    name: 前置检查
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python tools/check-refs.py
+      - run: python tools/check-body.py
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: 装 pandoc、typst 和中文字体
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends fonts-noto-cjk
+          curl -sSL "https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-linux-amd64.tar.gz" | tar xz
+          curl -sSL "https://github.com/typst/typst/releases/download/v${TYPST_VERSION}/typst-x86_64-unknown-linux-musl.tar.xz" | tar xJ
+          echo "$PWD/pandoc-${PANDOC_VERSION}/bin" >> "$GITHUB_PATH"
+          echo "$PWD/typst-x86_64-unknown-linux-musl" >> "$GITHUB_PATH"
+
+      - name: EPUB
+        run: python tools/build-epub.py
+
+      - name: 离线单文件 HTML
+        run: python tools/build-offline.py
+
+      - name: 在线检索页
+        run: python tools/build-index.py
+
+      - name: PDF
+        run: |
+          typst fonts | grep -i -E 'noto (serif|sans) cjk' || echo '没找到 Noto CJK，PDF 会退到别的字体，检查 fonts-noto-cjk 这一步'
+          python tools/build-pdf.py
+
+      - name: epubcheck
+        run: |
+          sudo apt-get install -y --no-install-recommends default-jre-headless unzip
+          curl -sSL -o epubcheck.zip https://github.com/w3c/epubcheck/releases/download/v5.2.1/epubcheck-5.2.1.zip
+          unzip -q epubcheck.zip
+          java -jar epubcheck-5.2.1/epubcheck.jar "dist/高性价比职场指南.epub"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: 高性价比职场指南
+          path: |
+            dist/高性价比职场指南.epub
+            dist/高性价比职场指南.pdf
+            dist/高性价比职场指南-全本.html
+
+      - name: 发布到 Release book-latest
+        if: github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git tag -f book-latest
+          git push -f origin book-latest
+          notes="正文提交 ${GITHUB_SHA::7}，生成于 $(date -u -d '+8 hours' +'%Y-%m-%d %H:%M')（北京时间）。EPUB、PDF、离线单文件 HTML 三样，正文每次更新后自动重新生成，下载链接固定不变。"
+          if gh release view book-latest >/dev/null 2>&1; then
+            gh release edit book-latest --title "电子书（EPUB / PDF / 离线 HTML，自动更新）" --notes "$notes"
+          else
+            gh release create book-latest --title "电子书（EPUB / PDF / 离线 HTML，自动更新）" --notes "$notes" --latest=false
+          fi
+          gh release upload book-latest \
+            "dist/高性价比职场指南.epub" \
+            "dist/高性价比职场指南.pdf" \
+            "dist/高性价比职场指南-全本.html" --clobber

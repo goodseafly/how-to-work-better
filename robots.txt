@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://guhaifei.github.io/how-to-work-better/sitemap.xml

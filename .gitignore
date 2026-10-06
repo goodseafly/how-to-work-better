@@ -1,0 +1,15 @@
+.idea/
+.junie/
+node_modules/
+
+# 构建中间产物与成品：成品挂到 Release 上，不进仓库
+_pdf_build/
+.tmp/
+dist/
+
+__pycache__/
+*.pyc
+
+# 本机工具位置（pandoc / typst 的绝对路径），不进仓库
+tools/local_paths.py
+local_paths.py

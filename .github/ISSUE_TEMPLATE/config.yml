@@ -1,0 +1,2 @@
+# 发布到 GitHub Pages 之后，把在线检索页地址补进 contact_links，再把 blank_issues_enabled 关掉。
+blank_issues_enabled: true

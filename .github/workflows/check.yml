@@ -1,0 +1,72 @@
+# 正文一改就跑两个检查器：交叉引用锚点、六字段与成本标签。
+# 拆成两个 job：锚点没补好不该连累体例检查，反之也一样，红灯各归各。
+# 本地这两个脚本要记得跑才会跑，网页上直接合并的 PR 完全经过不了，所以 CI 里得有一份。
+# 零依赖，只用标准库，几秒钟。
+name: 体例检查
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - README.md
+      - index.html
+      - book/**
+      - docs/**
+      - tools/**
+      - .github/workflows/check.yml
+  pull_request:
+    paths:
+      - README.md
+      - index.html
+      - book/**
+      - docs/**
+      - tools/**
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  refs:
+    name: 交叉引用检查
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python tools/check-refs.py
+
+  body:
+    name: 正文体例检查
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python tools/check-body.py
+
+  # 前两个 job 查的是「正文体例对不对」，这个查「产出对不对」——
+  # 目录与文件是否一一对位、README 里的表渲染出来还是不是表、交叉引用有没有越界、
+  # 条数与证据等级跟 README 声明是否一致。批次十五的教训：表被空行截断成散段，
+  # 两个体例检查器全绿。所以这里必须真渲染一遍（装 pandoc）。
+  audit:
+    name: 产出对齐检查
+    runs-on: ubuntu-latest
+    env:
+      PANDOC_VERSION: '3.12'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: 装 pandoc（渲染验证用）
+        run: |
+          curl -sSL "https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-linux-amd64.tar.gz" | tar xz
+          echo "$PWD/pandoc-${PANDOC_VERSION}/bin" >> "$GITHUB_PATH"
+      - run: python tools/full-audit.py --source-only
