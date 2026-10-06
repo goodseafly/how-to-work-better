@@ -303,6 +303,7 @@ def main():
            '    <item id="nav" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>\n'
            '    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>\n'
            '    <item id="css" href="style.css" media-type="text/css"/>\n'
+           '    <item id="cover-css" href="cover.css" media-type="text/css"/>\n'
            '    <item id="cover-img" href="cover.png" media-type="image/png" properties="cover-image"/>\n'
            '%s\n  </manifest>\n'
            '  <spine toc="ncx">\n%s\n  </spine>\n'
