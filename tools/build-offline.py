@@ -28,6 +28,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HERE = os.path.dirname(os.path.abspath(__file__))
 OFFICIAL = os.path.join(HERE, "shell-offline.html")
 OUT_DIR = os.environ.get("BOOK_OUT") or os.path.dirname(ROOT)
+os.makedirs(OUT_DIR, exist_ok=True)  # CI 里 BOOK_OUT=dist 时目录尚不存在
 OUT = os.path.join(OUT_DIR, "高性价比职场指南-全本.html")
 
 BOOK_TITLE = "高性价比职场指南"

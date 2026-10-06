@@ -31,6 +31,7 @@ from datetime import datetime
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT_DIR = os.environ.get("BOOK_OUT") or os.path.dirname(ROOT)
+os.makedirs(OUT_DIR, exist_ok=True)  # CI 里 BOOK_OUT=dist 时目录尚不存在
 OUT_PDF = os.path.join(OUT_DIR, "高性价比职场指南.pdf")
 def _local(name):
     """本机私有路径：同目录的 local_paths.py（不进仓库）。"""

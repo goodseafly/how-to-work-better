@@ -39,6 +39,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PANDOC = (os.environ.get("PANDOC") or _local("PANDOC")
           or shutil.which("pandoc") or "pandoc")
 OUT_DIR = os.environ.get("BOOK_OUT") or os.path.dirname(ROOT)
+os.makedirs(OUT_DIR, exist_ok=True)  # CI 里 BOOK_OUT=dist 时目录尚不存在
 OUT = os.path.join(OUT_DIR, "高性价比职场指南.epub")
 OG = os.path.join(ROOT, "og.png")
 TITLE = "高性价比职场指南"
