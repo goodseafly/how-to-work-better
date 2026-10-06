@@ -341,3 +341,15 @@ python tools/full-audit.py          # 产出对齐：README 真渲染、目录�
 
 书比法条旧得快。发现哪个数字过时、哪个链接打不开、哪条说法有误，[提一个纠错 issue](https://github.com/guhaifei/how-to-work-better/issues/new?template=1-%E7%BA%A0%E9%94%99.yml)，这比 Star 更帮这本书。
 
+## 赞赏
+
+觉得有用，可以用微信扫码请作者喝杯咖啡。给不给都行，不影响任何内容。
+
+<img src="ads/wechat-reward.png" alt="微信赞赏码" width="240">
+
+## 广告位
+
+<img src="ads/ad-slot.png" alt="广告位招租" width="820">
+
+这一块对外开放。广告位只做展示位，本书的条目、证据分级与结论一概不受广告影响；洽谈请[提一个 issue](https://github.com/guhaifei/how-to-work-better/issues)。
+
