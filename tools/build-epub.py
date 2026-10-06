@@ -44,7 +44,7 @@ OUT = os.path.join(OUT_DIR, "高性价比职场指南.epub")
 OG = os.path.join(ROOT, "og.png")
 TITLE = "高性价比职场指南"
 SUBTITLE = "打一份工，换回来什么"
-CREATOR = "guhaifei"
+CREATOR = "seafly"
 REPO = "https://github.com/eternity4719/HowToLiveBetter"
 
 CSS = """body{font-family:"Source Han Serif SC","Noto Serif CJK SC",serif;line-height:1.75;margin:0;padding:0 4%}

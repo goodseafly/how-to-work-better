@@ -77,7 +77,7 @@ if not CJK_REG:
         "tools/build-pdf.py 顶部的 _NIX_REG / _NIX_BOLD 候选列表。")
 
 BOOKTITLE = "高性价比职场指南"
-AUTHOR = "guhaifei"
+AUTHOR = "seafly"
 # 副标题里的条目数由 book/ 现算（见 book_stats），改正文后不用回来改这里
 SUBTITLE_TPL = ("按性价比排序的职场指南：%d 条建议，每条写明成本、收益、证据等级和原始出处，"
                 "可按钱、时间、毅力、收益、口径五个维度检索。")
