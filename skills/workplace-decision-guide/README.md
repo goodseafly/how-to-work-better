@@ -32,7 +32,7 @@ mkdir -p ~/.agents/skills && cp -r /path/to/高性价比职场指南/skills/work
 
 ## 正文从哪来
 
-skill 只读本地的 `book/` 和 `README.md`（这本书没有公开仓库），把上面的目录路径给到它即可。取不到正文就如实说取不到，不替代正文。
+skill 只读本地的 `book/` 和 `README.md`，把上面的目录路径给到它即可。仓库地址：https://github.com/goodseafly/how-to-work-better （公开，CC BY 4.0）。取不到正文就如实说取不到，不替代正文。
 
 ## 改动须知
 
