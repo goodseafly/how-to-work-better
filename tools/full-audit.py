@@ -269,6 +269,7 @@ for rel in ['README.md', 'CLAUDE.md', 'AGENTS.md', 'LICENSE', 'LICENSE-CODE', '.
             'robots.txt', '.gitignore', 'og.png', 'index.html',
             'skills/workplace-decision-guide/SKILL.md',
             '.claude/skills/workplace-decision-guide/SKILL.md',
+            '.github/FUNDING.yml',
             '.github/workflows/check.yml', '.github/workflows/book.yml',
             '.github/workflows/links.yml']:
     if not os.path.exists(os.path.join(ROOT, rel)):
@@ -278,7 +279,7 @@ for x in missing:
 need(len(missing) == 0, '仓库件缺失 %d：%s' % (len(missing), missing))
 tools = sorted(os.path.basename(x) for x in glob.glob(os.path.join(ROOT, 'tools', '*')))
 if not missing:
-    print('  ✓ 15 项发布件就位')
+    print('  ✓ 16 项发布件就位')
 print('  tools/: %s' % tools)
 need(any(t.startswith('build-') for t in tools), 'tools/ 里没有构建脚本')
 

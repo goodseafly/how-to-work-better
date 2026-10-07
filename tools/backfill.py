@@ -163,9 +163,9 @@ NOTE_03 = f"""{HEAD23}
 """
 
 NOTES = {
-    "docs/核实记录/01-投简历之前.md": NOTE_01,
-    "docs/核实记录/02-简历背调和面试.md": NOTE_02,
-    "docs/核实记录/03-offer劳动合同和入职.md": NOTE_03,
+    "docs/核实记录/01-别进错公司.md": NOTE_01,
+    "docs/核实记录/02-简历和面试别吃亏.md": NOTE_02,
+    "docs/核实记录/03-签合同别签错.md": NOTE_03,
 }
 
 

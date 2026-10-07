@@ -1,2 +1,5 @@
-# 发布到 GitHub Pages 之后，把在线检索页地址补进 contact_links，再把 blank_issues_enabled 关掉。
-blank_issues_enabled: true
+blank_issues_enabled: false
+contact_links:
+  - name: 先搜一下书里有没有
+    url: https://goodseafly.github.io/how-to-work-better/
+    about: 在线检索页能按关键词、章节、证据等级筛，也能按花不花钱、花多少时间、要不要毅力筛。想问的事多半已经有条目了。
