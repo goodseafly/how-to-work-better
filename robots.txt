@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://goodseafly.github.io/how-to-work-better/sitemap.xml
+Sitemap: https://goodseafly.github.io/how-to-make-work-pay/sitemap.xml

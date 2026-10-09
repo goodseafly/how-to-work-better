@@ -90,11 +90,11 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: how-to-work-better
+          name: how-to-make-work-pay
           path: |
-            dist/HowToWorkBetter.epub
-            dist/HowToWorkBetter.pdf
-            dist/HowToWorkBetter.html
+            dist/HowToMakeWorkPay.epub
+            dist/HowToMakeWorkPay.pdf
+            dist/HowToMakeWorkPay.html
 
       - name: 发布到 Release book-latest
         if: github.event_name != 'pull_request'
@@ -110,10 +110,10 @@ jobs:
             gh release create book-latest --title "电子书（EPUB / PDF / 离线 HTML，自动更新）" --notes "$notes" --latest=false
           fi
           # Release 资产名必须纯 ASCII：gh 上传中文名会被剥成 default.epub / -.html
-          cp "dist/高性价比职场指南.epub" dist/HowToWorkBetter.epub
-          cp "dist/高性价比职场指南.pdf" dist/HowToWorkBetter.pdf
-          cp "dist/高性价比职场指南-全本.html" dist/HowToWorkBetter.html
+          cp "dist/高性价比职场指南.epub" dist/HowToMakeWorkPay.epub
+          cp "dist/高性价比职场指南.pdf" dist/HowToMakeWorkPay.pdf
+          cp "dist/高性价比职场指南-全本.html" dist/HowToMakeWorkPay.html
           gh release upload book-latest \
-            dist/HowToWorkBetter.epub \
-            dist/HowToWorkBetter.pdf \
-            dist/HowToWorkBetter.html --clobber
+            dist/HowToMakeWorkPay.epub \
+            dist/HowToMakeWorkPay.pdf \
+            dist/HowToMakeWorkPay.html --clobber

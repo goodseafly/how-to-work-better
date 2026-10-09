@@ -9,7 +9,7 @@
 
 判定口径：
   - 「有回复」  = issue 评论数增加（或已有评论的内容变化）
-  - 「被收录」  = 对应仓库里出现除自己投稿外的、提及 goodseafly/how-to-work-better
+  - 「被收录」  = 对应仓库里出现除自己投稿外的、提及 goodseafly/how-to-make-work-pay
                   的 issue（月刊/周刊正文即 issue 正文）
   - 「被拒/关闭」= issue state 由 open 变 closed
 
@@ -30,7 +30,7 @@ from datetime import datetime, timezone, timedelta
 CST = timezone(timedelta(hours=8))
 TOKEN_PATH = r'D:/Users/92861/.ghtoken'
 SNAPSHOT = r'F:/高性价比人生指南/.workbuddy/submit-watch.json'
-BOOK = 'goodseafly/how-to-work-better'
+BOOK = 'goodseafly/how-to-make-work-pay'
 
 TARGETS = [
     dict(key='hellogithub', name='HelloGitHub 月刊',
@@ -106,7 +106,7 @@ def fetch_one(t, tok):
 
 def fetch_mentions(t, tok):
     """在投稿目标仓库里搜本书的被提及情况，排除自己提交的那条"""
-    q = urllib.parse.quote('"how-to-work-better" repo:%s in:title,body,comments' % t['repo'])
+    q = urllib.parse.quote('"how-to-make-work-pay" OR "how-to-work-better" repo:%s in:title,body,comments' % t['repo'])
     try:
         d = api('https://api.github.com/search/issues?q=%s&per_page=40' % q, tok)
     except Exception as e:

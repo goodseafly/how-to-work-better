@@ -9,23 +9,23 @@
 
 不用全做：这是按性价比排好的备选单，不是任务清单——挑走一两条就算数。
 
-**这本书只有这一个仓库，没有别的版本。** 从没有授权任何机构以本书名义招生、代报名、推荐岗位或者收费，也没有卖过课程、资料包和会员。看到这类收费的，跟这本书没有关系——那种套路书里第 1 节就写了，见[第 1 节第 9 条（收费培训）](book/01-别进错公司.md)。
+**这本书只有这一个仓库，没有别的版本。**（曾用名 HowToWorkBetter：2026 年 10 月英文书名定为 How to Make Work Pay，仓库与在线检索页一并改名，旧链接会自动跳转。）从没有授权任何机构以本书名义招生、代报名、推荐岗位或者收费，也没有卖过课程、资料包和会员。看到这类收费的，跟这本书没有关系——那种套路书里第 1 节就写了，见[第 1 节第 9 条（收费培训）](book/01-别进错公司.md)。
 
-[![在线检索](https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF%E6%A3%80%E7%B4%A2-%E7%82%B9%E8%BF%99%E9%87%8C%E6%89%93%E5%BC%80-3451b2?style=flat-square)](https://goodseafly.github.io/how-to-work-better/)
+[![在线检索](https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF%E6%A3%80%E7%B4%A2-%E7%82%B9%E8%BF%99%E9%87%8C%E6%89%93%E5%BC%80-3451b2?style=flat-square)](https://goodseafly.github.io/how-to-make-work-pay/)
 [![条目](https://img.shields.io/badge/%E6%9D%A1%E7%9B%AE-576%20%E6%9D%A1-18794e?style=flat-square)](#目录)
 [![证据分级](https://img.shields.io/badge/%E8%AF%81%E6%8D%AE%E5%88%86%E7%BA%A7-A%20518%20%C2%B7%20B%2051%20%C2%B7%20C%207-915930?style=flat-square)](#证据分级)
 [![原始文献](https://img.shields.io/badge/%E5%8E%9F%E5%A7%8B%E6%96%87%E7%8C%AE-885%20%E6%9D%A1%E9%93%BE%E6%8E%A5-565a5f?style=flat-square)](docs/核实记录/)
 [![许可](https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF-CC%20BY%204.0-565a5f?style=flat-square)](#许可)
-[![GitHub Star](https://img.shields.io/github/stars/goodseafly/how-to-work-better?style=flat-square&label=Star)](https://github.com/goodseafly/how-to-work-better/stargazers)
+[![GitHub Star](https://img.shields.io/github/stars/goodseafly/how-to-make-work-pay?style=flat-square&label=Star)](https://github.com/goodseafly/how-to-make-work-pay/stargazers)
 
-### [打开在线检索页](https://goodseafly.github.io/how-to-work-better/) · [让 AI 照书回答（skill）](skills/workplace-decision-guide/README.md)
+### [打开在线检索页](https://goodseafly.github.io/how-to-make-work-pay/) · [让 AI 照书回答（skill）](skills/workplace-decision-guide/README.md)
 
 AI 助手 skill 支持 Claude Code 和 Codex。装上后直接问「公司让我签竞业协议，签不签」，它先查书里的条目再回答，并注明出自第几节第几条。
 
 <table>
 <tr><td align="right"><b>下载</b></td><td align="left">
 
-[PDF](https://github.com/goodseafly/how-to-work-better/releases/download/book-latest/HowToWorkBetter.pdf) · [EPUB](https://github.com/goodseafly/how-to-work-better/releases/download/book-latest/HowToWorkBetter.epub) · [离线单文件（HTML）](https://github.com/goodseafly/how-to-work-better/releases/download/book-latest/HowToWorkBetter.html)
+[PDF](https://github.com/goodseafly/how-to-make-work-pay/releases/download/book-latest/HowToMakeWorkPay.pdf) · [EPUB](https://github.com/goodseafly/how-to-make-work-pay/releases/download/book-latest/HowToMakeWorkPay.epub) · [离线单文件（HTML）](https://github.com/goodseafly/how-to-make-work-pay/releases/download/book-latest/HowToMakeWorkPay.html)
 
 </td></tr>
 <tr><td align="right"><b>查阅</b></td><td align="left">
@@ -89,9 +89,9 @@ AI 助手 skill 支持 Claude Code 和 Codex。装上后直接问「公司让我
 - **按性价比读。** 每节内的条目不是按时间排的，也不是按流程排的，是按「花出去多少、换回来多少」排的。最前面那几条通常不花钱、不费时间，先做这些。
 - **按成本标签筛。** 每条标题下面有一行只有机器看得见的成本标签，把「钱」「时间」「毅力」三样标出来。你只想找不花钱的，就筛「钱=0」。
 - **按口径分开看。** 每条说的是换回什么——钱、时间、健康、岗位还是人身自由。不同口径之间不做比较：一条省下两万块的条目，和一条避免刑事责任的条目，谁更值不值得做，没有统一答案。
-- **只想看结论最硬的。** 在[在线检索页](https://goodseafly.github.io/how-to-work-better/)里勾选证据等级 A，只留下引到法律、行政法规、部委规章和官方统计原文的 518 条。
+- **只想看结论最硬的。** 在[在线检索页](https://goodseafly.github.io/how-to-make-work-pay/)里勾选证据等级 A，只留下引到法律、行政法规、部委规章和官方统计原文的 518 条。
 - **只想看最值得做的。** 勾选性价比「极高」，得到 133 条既不花钱、不花时间、不需要毅力，收益又落在最大一档的条目。再叠加一个「换回什么」，就是该口径下的优先清单。
-- **想按条件挑。** 打开[在线检索页](https://goodseafly.github.io/how-to-work-better/)（想用本地那份也行，见下文「自己跑一份」），可以按关键词、章节、证据等级来筛，也可以按「花不花钱、花多少时间、要不要毅力」三样筛，几个条件能叠着用。页面上的内容直接取自 book/ 目录里的正文，正文一改，重跑构建脚本页面就跟着改。
+- **想按条件挑。** 打开[在线检索页](https://goodseafly.github.io/how-to-make-work-pay/)（想用本地那份也行，见下文「自己跑一份」），可以按关键词、章节、证据等级来筛，也可以按「花不花钱、花多少时间、要不要毅力」三样筛，几个条件能叠着用。页面上的内容直接取自 book/ 目录里的正文，正文一改，重跑构建脚本页面就跟着改。
 - **想离线看、想发给别人。** 离线单文件版（高性价比职场指南-全本.html）整本书连同检索和筛选都在一个文件里，双击就开，不用服务器也不用联网，微信里也能直接传。
 - **想打印或在手机上翻。** 用 PDF 版：A4 排版、五百多页，带目录页码和书签，每节另起一页。
 - **想在 Kindle 或其他阅读器上读。** 用 EPUB 版（高性价比职场指南.epub），Kindle 用 Send to Kindle 发过去即可。
@@ -346,7 +346,7 @@ python tools/full-audit.py          # 产出对齐：README 真渲染、目录�
 
 ## 正文
 
-正文按节拆成 32 个文件放在 [book/](book/)，点上面目录里的节名进入。[在线检索页](https://goodseafly.github.io/how-to-work-better/)会把这些文件合起来读，用法不变。
+正文按节拆成 32 个文件放在 [book/](book/)，点上面目录里的节名进入。[在线检索页](https://goodseafly.github.io/how-to-make-work-pay/)会把这些文件合起来读，用法不变。
 
 ## 许可
 
@@ -360,13 +360,13 @@ python tools/full-audit.py          # 产出对齐：README 真渲染、目录�
 
 ## Star 走势
 
-[![Star History Chart](https://api.star-history.com/svg?repos=goodseafly/how-to-work-better&type=Date)](https://star-history.com/#goodseafly/how-to-work-better&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=goodseafly/how-to-make-work-pay&type=Date)](https://star-history.com/#goodseafly/how-to-make-work-pay&Date)
 
 ## 觉得有用
 
-哪一条真的帮到了你——谈下了补偿、追回了欠薪、躲开了一份坑合同——欢迎给仓库点一个 [Star](https://github.com/goodseafly/how-to-work-better/stargazers)，让还在闷头吃哑巴亏的人搜得到这本书。
+哪一条真的帮到了你——谈下了补偿、追回了欠薪、躲开了一份坑合同——欢迎给仓库点一个 [Star](https://github.com/goodseafly/how-to-make-work-pay/stargazers)，让还在闷头吃哑巴亏的人搜得到这本书。
 
-书比法条旧得快。发现哪个数字过时、哪个链接打不开、哪条说法有误，[提一个纠错 issue](https://github.com/goodseafly/how-to-work-better/issues/new?template=1-%E7%BA%A0%E9%94%99.yml)，这比 Star 更帮这本书。
+书比法条旧得快。发现哪个数字过时、哪个链接打不开、哪条说法有误，[提一个纠错 issue](https://github.com/goodseafly/how-to-make-work-pay/issues/new?template=1-%E7%BA%A0%E9%94%99.yml)，这比 Star 更帮这本书。
 
 ## 别人拿这本书做的事
 
@@ -374,7 +374,7 @@ python tools/full-audit.py          # 产出对齐：README 真渲染、目录�
 
 不想自己做图？[promo/](promo/) 里有现成的一包：12 张场景卡和算账卡、3 条口播稿、三种长度的[简介](promo/简介.md)，下载即用，条目出处都标好了。
 
-做好了[提一个 issue](https://github.com/goodseafly/how-to-work-better/issues)告诉我，我把它加到这里。原版[《高性价比人生指南》](https://github.com/eternity4719/HowToLiveBetter)开放授权之后，读者做出了五个翻译仓库、一个打勾清单站点、一个微信小程序——**开放的许可把这批人聚了起来，这正是这份许可值钱的地方。**
+做好了[提一个 issue](https://github.com/goodseafly/how-to-make-work-pay/issues)告诉我，我把它加到这里。原版[《高性价比人生指南》](https://github.com/eternity4719/HowToLiveBetter)开放授权之后，读者做出了五个翻译仓库、一个打勾清单站点、一个微信小程序——**开放的许可把这批人聚了起来，这正是这份许可值钱的地方。**
 
 ## 赞赏
 
@@ -386,5 +386,5 @@ python tools/full-audit.py          # 产出对齐：README 真渲染、目录�
 
 <img src="ads/ad-slot.png" alt="广告位招租" width="820">
 
-这一块对外开放。广告位只做展示位，本书的条目、证据分级与结论一概不受广告影响；洽谈请[提一个 issue](https://github.com/goodseafly/how-to-work-better/issues)。
+这一块对外开放。广告位只做展示位，本书的条目、证据分级与结论一概不受广告影响；洽谈请[提一个 issue](https://github.com/goodseafly/how-to-make-work-pay/issues)。
 
