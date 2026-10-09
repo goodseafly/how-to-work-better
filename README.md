@@ -42,8 +42,6 @@ AI 助手 skill 支持 Claude Code 和 Codex。装上后直接问「公司让我
 
 <sub>在线检索页、离线单文件、PDF、EPUB 四样都由 <code>book/</code> 里的正文现生成。PDF、EPUB 和离线单文件在正文每次更新后自动重新生成，下载链接固定不变。</sub>
 
-<sub>体例继承 <a href="https://github.com/eternity4719/HowToLiveBetter">HowToLiveBetter</a>（CC BY 4.0）：每条建议都写明成本、收益、证据等级和原始来源。</sub>
-
 </div>
 
 ## 这本书想回答的问题
@@ -356,7 +354,7 @@ python tools/full-audit.py          # 产出对齐：README 真渲染、目录�
 
 书里的法条、社保比例、假期天数和各项标准经常更新。**转载或者拿去用的时候，请同时写上你同步的是哪一天的版本。**
 
-代码用 [MIT](LICENSE-CODE) 发布，范围是 tools/、skills/、index.html 和 .github/。其中 `tools/shell-index.html`、`tools/shell-offline.html`、`tools/template.typ` 是 [HowToLiveBetter](https://github.com/eternity4719/HowToLiveBetter) 的查看器外壳与 typst 排版模板，版权归原作者，按 MIT 使用；六字段、证据分级、成本标签这套文字体例也继承自那个项目（CC BY 4.0）。范围与归属写法见 LICENSE-CODE 末尾那一段。
+代码用 [MIT](LICENSE-CODE) 发布，范围是 tools/、skills/、index.html 和 .github/。其中查看器外壳与 typst 排版模板沿用了开源项目的现成代码，那部分版权归原作者，按 MIT 使用。范围与归属写法见 LICENSE-CODE 末尾那一段。
 
 ## Star 走势
 
@@ -374,7 +372,7 @@ python tools/full-audit.py          # 产出对齐：README 真渲染、目录�
 
 不想自己做图？[promo/](promo/) 里有现成的一包：12 张场景卡和算账卡、3 条口播稿、三种长度的[简介](promo/简介.md)，下载即用，条目出处都标好了。
 
-做好了[提一个 issue](https://github.com/goodseafly/how-to-make-work-pay/issues)告诉我，我把它加到这里。原版[《高性价比人生指南》](https://github.com/eternity4719/HowToLiveBetter)开放授权之后，读者做出了五个翻译仓库、一个打勾清单站点、一个微信小程序——**开放的许可把这批人聚了起来，这正是这份许可值钱的地方。**
+做好了[提一个 issue](https://github.com/goodseafly/how-to-make-work-pay/issues)告诉我，我把它加到这里。**开放的许可值钱的地方就在这里：不用等谁点头，谁都能接着做。**
 
 ## 赞赏
 

@@ -637,7 +637,7 @@ def build_html(sections):
 
     hero = (
         '<header class="hero">\n'
-        '  <div class="kicker">HowToLiveBetter 体例 · 职场版</div>\n'
+        '  <div class="kicker">职场版</div>\n'
         '  <h1>高性价比职场指南<small>打一份工，换回来什么。</small></h1>\n'
         '  <p class="hero-note">每条建议都写明成本、收益、证据等级和原始来源。</p>\n'
         '  <div class="facts">\n'
@@ -666,7 +666,7 @@ def build_html(sections):
 
     footer = (
         '<footer class="foot">\n'
-        '  <div>体例继承 HowToLiveBetter（CC BY 4.0），每条都写明成本、收益、证据等级和原始来源。</div>\n'
+        '  <div>每条都写明成本、收益、证据等级和原始来源。</div>\n'
         '  <div>生成于 %s · 由 book/*.md 自动生成，共 %d 节 %d 条。</div>\n'
         '</footer>\n'
     ) % (gen_time, sec_count, total)

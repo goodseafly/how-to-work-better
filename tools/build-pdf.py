@@ -82,7 +82,7 @@ AUTHOR = "seafly"
 SUBTITLE_TPL = ("按性价比排序的职场指南：%d 条建议，每条写明成本、收益、证据等级和原始出处，"
                 "可按钱、时间、毅力、收益、口径五个维度检索。")
 STAMP = datetime.now().strftime("%Y-%m-%d %H:%M")
-OFF_REPO = "https://github.com/eternity4719/HowToLiveBetter"
+SELF_REPO = "https://github.com/goodseafly/how-to-make-work-pay"
 
 
 def read(p):
@@ -224,14 +224,14 @@ def rewrite_links(md, src, anchor_of):
         if href.startswith(("http:", "https:", "mailto:")):
             return m.group(0)
         if href.startswith("#"):
-            return "](%s/blob/main/README.md%s%s)" % (OFF_REPO, href, title)
+            return "](%s/blob/main/README.md%s%s)" % (SELF_REPO, href, title)
         path = href.split("#")[0]
         base = os.path.dirname(src).replace("\\", "/")
         target = os.path.normpath(os.path.join(base, path)).replace("\\", "/")
         if target in anchor_of:
             return "](#%s%s)" % (anchor_of[target], title)
         kind = "tree" if target.endswith("/") else "blob"
-        return "](%s/%s/main/%s%s)" % (OFF_REPO, kind, target, title)
+        return "](%s/%s/main/%s%s)" % (SELF_REPO, kind, target, title)
     return re.sub(r"\]\(([^)\s]+)(\s+\"[^\"]*\")?\)", repl, md)
 
 
@@ -296,12 +296,11 @@ def main():
 
 - 生成时间：%s（北京时间）
 - 在线检索页：同目录的《高性价比职场指南-全本.html》（按关键词、章节、证据等级和成本筛选）
-- 体例来源：HowToLiveBetter（CC BY 4.0，%s）
 
 正文里指向书内其他节的链接、以及全部「第 X 节第 Y 条」交叉引用，都做成了书内跳转；每节正文后面跟着该节的核实记录（引用原文的逐条核对过程）。
 
 正文按 CC BY 4.0 发布（https://creativecommons.org/licenses/by/4.0/）。可以转载、改编、商用，要写明出处「%s」，改过内容的要注明改过。
-""" % (STAMP, OFF_REPO, BOOKTITLE)
+""" % (STAMP, BOOKTITLE)
 
     pages = [
         {"src": "README.md", "anchor": "front",
@@ -349,8 +348,7 @@ def main():
         "    正文每天都在改，以在线版为准：$site$ \\\n"
         "    在线检索、EPUB 与本 PDF 的最新版都在 $repo$",
         "生成于 $builddate$（北京时间） \\\n"
-        "    在线检索页：同目录《高性价比职场指南-全本.html》 \\\n"
-        "    体例继承 HowToLiveBetter（CC BY 4.0）")
+        "    在线检索页：同目录《高性价比职场指南-全本.html》")
     if "$site$" in tpl or "$repo$" in tpl or "$commit$" in tpl:
         sys.exit("模板里还残留 site/repo/commit 变量引用，检查封面块是否匹配")
     tpl_path = os.path.join(WORK, "template.typ")

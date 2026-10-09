@@ -45,7 +45,7 @@ OG = os.path.join(ROOT, "og.png")
 TITLE = "高性价比职场指南"
 SUBTITLE = "打一份工，换回来什么"
 CREATOR = "seafly"
-REPO = "https://github.com/eternity4719/HowToLiveBetter"
+REPO = "https://github.com/goodseafly/how-to-make-work-pay"
 
 CSS = """body{font-family:"Source Han Serif SC","Noto Serif CJK SC",serif;line-height:1.75;margin:0;padding:0 4%}
 h1{font-size:1.5em;margin:1.2em 0 .6em;line-height:1.4}
@@ -159,12 +159,11 @@ def about_md(total, grades):
         "- 条目：%d 条（A %d / B %d / C %d）\n"
         "- 在线检索页、离线单文件、PDF、EPUB 四样，都由 tools/ 下的脚本从 book/ 里的正文现生成\n"
         "- 每条来源的核实记录：docs/核实记录/\n"
-        "- 体例来源与查看器外壳：[HowToLiveBetter](%s)（CC BY 4.0）\n\n"
         "正文里指向仓库内其他文件的链接已改成书内跳转。\n\n"
         "正文以 CC BY 4.0 发布（https://creativecommons.org/licenses/by/4.0/）。"
         "可以转载、改编、商用，要写明出处「高性价比职场指南」并附仓库链接，改过内容的要注明改过。"
         "书里的法条、社保比例、假期天数和各项标准经常更新，转载时请同时写上你同步的是哪一天的版本。\n"
-        % (stamp, total, grades["A"], grades["B"], grades["C"], REPO)
+        % (stamp, total, grades["A"], grades["B"], grades["C"])
     )
 
 

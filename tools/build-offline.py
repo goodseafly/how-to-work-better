@@ -48,6 +48,7 @@ OFF_KEYWORDS = "长寿,健康,循证,总死亡率,省钱,理财,防骗,急救,�
 OFF_REPO = "https://github.com/eternity4719/HowToLiveBetter"
 OFF_SITE = "https://eternity4719.github.io/HowToLiveBetter/"
 OFF_BLOB = "https://github.com/eternity4719/HowToLiveBetter/blob/main/"
+SELF_REPO = "https://github.com/goodseafly/how-to-make-work-pay"
 
 
 def must_sub(text, old, new, n=1):
@@ -188,7 +189,7 @@ def main():
     out = must_sub(out, old_docpath, new_docpath)
     out = must_sub(out, "DM.gh.href = dmHref(path);", "DM.gh.hidden = true;")
 
-    # 导航：logo 指回页内；README 图标改挂核实记录弹窗；仓库图标改指体例来源
+    # 导航：logo 指回页内；README 图标改挂核实记录弹窗；仓库图标改指本仓库
     out = must_sub(out, '<a class="title" href="%s">' % OFF_SITE, '<a class="title" href="#">')
     out = must_sub(out,
                    '<a class="icon-btn" href="%sREADME.md" title="查看 README.md" aria-label="README">'
@@ -197,8 +198,8 @@ def main():
     out = must_sub(out,
                    '<a class="icon-btn" href="%s" target="_blank" rel="noopener" title="在 GitHub 上查看源仓库" aria-label="GitHub 仓库">'
                    % OFF_REPO,
-                   '<a class="icon-btn" href="%s" target="_blank" rel="noopener" title="体例来源：HowToLiveBetter（CC BY 4.0）" aria-label="体例来源">'
-                   % OFF_REPO)
+                   '<a class="icon-btn" href="%s" target="_blank" rel="noopener" title="在 GitHub 上查看本仓库" aria-label="GitHub 仓库">'
+                   % SELF_REPO)
 
     # 筛选抽屉：口径胶囊换成我们的五个取值；证据等级小注改成职场书口径
     out = must_sub(out,
@@ -263,17 +264,17 @@ def main():
 
     # 页眉注释
     out = must_sub(out, "<!doctype html>",
-                   "<!-- %s · 官方 HowToLiveBetter 查看器排版 · 由 tools/build-offline.py 从 book/ 与 docs/ 生成，正文改动后重跑即可 -->\n<!doctype html>" % BOOK_TITLE)
+                   "<!-- %s · 离线单文件 · 由 tools/build-offline.py 从 book/ 与 docs/ 生成，正文改动后重跑即可 -->\n<!doctype html>" % BOOK_TITLE)
 
     # 页脚整块重写（原页脚是官方离线版的版本说明，含上游链接与官方口径注释）
     old_foot = re.search(r'<div class="foot">[\s\S]*?</div>\n  </div>', out).group(0)
     new_foot = ('<div class="foot">由 book/ 与 docs/核实记录 自动生成（%s）。'
                 '数字口径以条目内标注为准，互不换算。每条引用的原文核对过程见页头右侧的'
                 ' <a href="docs/核实记录/00-目录.md">核实记录</a>。'
-                '体例继承 <a href="%s">HowToLiveBetter</a>，正文按 '
+                '正文按 '
                 '<a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hans">CC BY 4.0</a> '
                 '发布，转载改编请署名并附原文链接。</div>\n  </div>') % (
-        __import__('datetime').datetime.now().strftime('%Y-%m-%d %H:%M'), OFF_REPO)
+        __import__('datetime').datetime.now().strftime('%Y-%m-%d %H:%M'))
     out = must_sub(out, old_foot, new_foot)
 
     # ---------- 5. 校验 ----------
